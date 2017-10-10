@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ViTO Ausralia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<style type="text/css">
+/* Background colors */
+.color-1 { background: #E8E0DA; }
+.color-2 { background: #576b67; }
+.color-3 { background: #383A35; }
+.color-4 { background: #333; }
+.color-5 { background: #fda9a9; }
+.color-7 { background: #cde7d3; }
+.color-8 { background: #DCECDD; }
+.color-9 { background: #dedbba; }
+.color-10 { background: #222; }
+.color-11 { background: #515151; }
+.color-about { background: #E8E0DA; }	
+.color-services { background: url(images/australia.jpg) bottom center no-repeat; }	
+.color-testimonials { background: #fff; }	
+.color-people { background: #C9D8DE; }	
+.color-map { background: #fff; }	
+
+
+	
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	background: #222;
+	z-index: 10;
+}
+.header .navbar-brand {
+	font-weight: 900;
+}
+.header .navbar {
+	margin: 0;
+	border: none;
+}
+.page-section {
+	width: 100%;
+	min-height: 800px;
+	padding: 50px 0;
+	border-bottom: 10px solid #fff;
+}
+.page-section h1 {
+	font-size: 4em;
+	margin: 50px 0;
+}
+.page-section h1 span {
+	font-weight: 200;
+}
+.page-section h2 {
+	font-size: 3em;
+	font-weight: 900;
+	color: #fff;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+	text-shadow: 2px 2px 2px #000;
+}
+.page-section h3 {
+	font-size: 2 em;
+	font-weight: 500;
+	color: #BFD0D2;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+	
+}	
+.page-section p {
+	font-size: 1.2em;
+	font-weight: 200;
+	margin: 0 25% 20px 0;
+}
+.page-section p.lead {
+	font-size: 1.8em;
+	color:white;
+}
+.page-section p.caption {
+	color: #fff;
+	padding: 20px;
+	background: url(images/trans_black_25.png);
+	text-shadow: 1px 1px 1px #000;
+}
+.page-section.intro {
+	min-height: 800px;
+}
+.page-section#top {
+	background: url(images/top.jpg) bottom center no-repeat;
+}
+
+
+.btn {
+	font-weight: 200;
+}
+.btn-dark {
+	background: #444;
+	color: #fff;
+}
+.btn-dark:hover {
+	background: #000;
+	color: #fff;
+}
+.back-to-top {
+	display: inline-block;
+	clear: both;
+	background: #fff;
+	color: #333;
+	padding: 0 10px 5px;
+	margin: 20px 0 0;
+	text-shadow: none;
+	margin-left: 90%;
+}
+.back-to-top:hover {
+	background: #333;
+	color: #fff;
+	text-decoration: none;
+}
+
+hr {border-color: #ddd;}
+
+@media (min-width: 768px) {
+	.header .navbar-brand {
+		padding-left: 0;
+	}
+	.navbar-nav {
+		float: right;
+	}
+}
+@media (max-width: 480px) {
+	.page-section h1 {
+		font-size: 3em;
+	}
+	.page-section h2 {
+		font-size: 2em;
+	}
+	.page-section p {
+		font-size: 1em;
+		margin: 0 0 20px;
+	}
+}
+
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 3em;
+	color: #9e9ba4;
+	display: inline-block;
+	cursor: default;
+}
+.link--takiri {
+	font-style: italic;
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	font-size: 3em;
+	padding: 0 10px 20px;
+	-webkit-transition: color 0.5s;
+	transition: color 0.5s;
+}
+
+.link--takiri:hover {
+	color:#FCF1EE;
+	text-decoration: none;
+}
+
+.link--takiri::before {
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	top: 50%;
+	margin-top: 16px;
+	left: 0%;
+	z-index: -1;
+	background: #F9F9F9;
+	-webkit-transform: rotate3d(0,0,1,0deg) scale3d(0,1,1);
+	transform: rotate3d(0,0,1,0deg) scale3d(0,1,1);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+.link--takiri::after {
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	top: 50%;
+	margin-top: -40px;
+	left: 0%;
+	z-index: -1;
+	background: #F9F9F9;
+	-webkit-transform: rotate3d(0,0,1,0deg) scale3d(0,1,1);
+	transform: rotate3d(0,0,1,0deg) scale3d(0,1,1);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.link--takiri:hover::before {
+	-webkit-transform: rotate3d(0,0,1,0deg) scale3d(1,1,1);
+	transform: rotate3d(0,0,1,0deg) scale3d(1,1,1);
+}
+.link--takiri:hover::after {
+	-webkit-transform: rotate3d(0,0,1,0deg) scale3d(1,1,1);
+	transform: rotate3d(0,0,1,0deg) scale3d(1,1,1);
+}
+
+.link--takiri span {
+	font-size: 30%;
+	font-weight: 400;
+	position: absolute;
+	right: 15px;
+	color: #e53369;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translate3d(-10px,-10px,0);
+	transform: translate3d(-10px,-10px,0);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.link--takiri:hover span {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.grid__item {
+	height: 160px;
+	margin: 20px;
+	padding: 100px 0  160px 0;
+	z-index: 1;
+	position: relative;
+
+}
+
+.grid-block {
+	position: relative;
+	float: left;
+	min-height: 100px
+	min-width:100px;
+	width: 200px;
+	height: 300px;
+	margin: 0 0 30px 30px;
+}
+
+
+.slide__caption {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(images/trans_black_50.png);
+	width: 100%;
+	height: 100%;
+}
+.slide__caption h3, .slide__caption p {
+	color: #fff;
+	margin: 20px;
+}
+.slide__caption h3 {
+	margin: 20px 20px 10px;
+}
+.slide__caption p {
+	font-size: .75em;
+	line-height: 1.5em;
+	margin: 0 20px 15px;
+}
+.slide__caption a.learn-more {
+	padding: 5px 10px;
+	background: #08c;
+	color: #fff;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.slide__caption a.learn-more:hover {
+	background: #fff;
+	color: #08c;
+}
+.map{
+	overflow:hidden;
+	height:340px;
+	width:700px;
+}
+#gmap_canvas{
+	height: 100%;
+	width: 100%;
+}
+#map p {
+	font-size: 1em;
+	font-weight: 100;
+	margin-bottom:0.5em;
+}
+#map h4 {
+	font-size: 1.2em;
+	font-weight: 400;
+	margin: 1em 0 1em 0;
+}
+
+</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="container">
+		<nav class="navbar navbar-inverse" role="navigation">
+        	<div class="navbar-header">
+	            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
+	            <a href="#" class="navbar-brand scroll-top">HOME</a></div>
+        	<!--/.navbar-header-->
+	        <div id="main-nav" class="collapse navbar-collapse">
+	            <ul class="nav navbar-nav">
+		            <li><a href="#" class="scroll-link" data-id="about">About us</a></li>
+					<li><a href="#" class="scroll-link" data-id="services">Our Services</a></li>
+					<li><a href="#" class="scroll-link" data-id="testimonials">Testimonial</a></li>
+					<li><a href="#" class="scroll-link" data-id="people">Our People</a></li>
+					<li><a href="#" class="scroll-link" data-id="map">Contact</a></li>
+
+	            </ul>
+	        </div>
+	        <!--/.navbar-collapse-->
+	    </nav>
+	    <!--/.navbar-->
+	</div>
+	<!--/.container-->
+</div>
+<!--/.header-->
+
+<div id="top" class="page-section intro">
+	<div class="container">
+	<div class="grid__item">
+		<a class="link link--takiri" href="#">SURVCORP<span>Consulting landsurveyors</span> </a>
+	</div>
+
+		<p class="caption">SURVCORP Consulting Surveyors is a professional land surveying company established in 2014. We only use the latest and most suitable survey equiment together with the latest software to ensure plan and information can be provided in a timely and accurate manner. Survcorp Pty Ltd is member of Consulting Surveyors NSW.
+
+		<br><br><br>
+
+			<a href="#" class="scroll-link btn btn-dark" data-id="services">Scroll to Services</a>
+			<a href="#" class="scroll-link btn btn-dark" data-id="contact">Scroll to Contact</a>
+		</p>
+
+
+	</div>
+	<!--/.container-->
+</div>
+<!--/.page-section-->
+
+<div id="about" class="page-section color-about">
+	<div class="container">
+		<h2>About our company</h2>
+		<p class="caption">
+		A successful building project starts with a precise Land Survey. SURVCORP Pty Ltd is a multi-faceted, full service Land Surveying company with consulting services available as needed for all types of projects. We have provided quality of services and technical excellence throughtout NSW
+		<br/>
+		Director Simon Ho, a Registered Surveyor in NSW has over 20 years of local experience and all staffs are locally trained and qualified. Our staff of professional Land Surveryor, Cad Technician Specialist and Management team are able to provide an array of surveying services for construction and building industries, and land developers
+		</p>
+		<a href="#" class="scroll-top back-to-top">&uarr;</a>
+	</div>
+	<!--/.container-->
+</div>
+<!--/#about-->
+
+<div id="services" class="page-section  color-services">
+	<div class="container">
+		<h2>Our services</h2>
+		
+	  <p  class="caption">
+      		 Plan for LPI	<br/>		   
+		  	 Torren Subdivision <br/> 
+			 Community Plan  <br/>
+			 &nbsp;&nbsp;&nbsp;Stratum Subdivision , Redefinition , Easement Plan, Strata Plan, <br>
+			 &nbsp;&nbsp;&nbsp;Plan of Survey Information Only <br/>
+			 Survey Plan/Report for
+			 <br>
+			 &nbsp;&nbsp;&nbsp;Development Application, Occupation certificate, Building certificate, <br>
+			 &nbsp;&nbsp;&nbsp;Sale of Property, Boundary disputes, Council audit, Work as Executed<br>
+			 Instrument for LPI<br>
+			 Building/Engineering setout<br>
+			 Council Application<br>
+		</p>
+		<a href="#" class="scroll-top back-to-top">&uarr;</a>
+	</div>
+	<!--/.container-->
+</div>
+<!--/#services-->
+
+<div id="testimonials" class="page-section color-testimonials">
+	<div class="container">
+		<h2>Testimonials</h2>
+		<blockquote class="blockquote">
+			<p>Simon was fantastic, on time, courteous and professional. If and when I need to get a surveyor again he will be my go to man. Awesome!</p>
+			<footer class="blockquote-footer">Kylie from St Ives, NSW</footer>
+        </blockquote>
+		<blockquote class="blockquote">
+			<p>Simon & the team at Survcorp were brilliant. Very flexible, very reasonably priced, and extremely helpful.</p>
+			<footer class="blockquote-footer"> Richard from Forestville, NSW</footer>
+		</blockquote>
+		<blockquote class="blockquote">
+			<p>We highly recommend Survcorp. Speedy and professional service! Thank you so much Simon!</p><footer class="blockquote-footer">Vicky from Epping, NSW</footer>
+		</blockquote>
+		<a href="#" class="scroll-top back-to-top">&uarr;</a>
+	</div>
+	<!--/.container-->
+</div>
+<!--/#testimonials-->
+
+<div id="people" class="page-section color-people">
+	<div class="container">
+		<h2>Our People</h2>
+		 <div class="row">
+		 	<div class="col-md-4">
+                <div class="grid-block slide">
+                    <div class="slide__caption">
+
+                        <h3>Staff 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <img src="images/cub_200300.gif">
+                </div>
+                <!--/.grid-block-->
+            </div>
+            <div class="col-md-4">
+                <div class="grid-block slide">
+                    <div class="slide__caption">
+
+                        <h3>Staff 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                    </div>
+                    <img src="images/con_200300.gif">
+                </div>
+                <!--/.grid-block-->
+            </div>
+            <div class="col-md-4">
+                <div class="grid-block slide">
+                    <div class="slide__caption">
+
+                        <h3>Staff 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <img src="images/vito_coffee_200300.gif">
+                </div>
+                <!--/.grid-block-->
+            </div>
+
+		</div>
+		<!-- .row -->
+		<a href="#" class="scroll-top back-to-top">&uarr;</a>
+	</div>
+	<!--/.container-->
+</div>
+<!--/#people-->
+
+<div id="map" class="page-section color-map">
+	<div class="container">
+	<h2>Contact us</h2>
+		<div class="row">
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+		<div class='map'><div id='gmap_canvas'></div><div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div><div><small><a href="http://ironlinkdirectory.com/">web directory</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+		<script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(-33.8318032,151.22256160000006),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-33.8318032,151.22256160000006)});infowindow = new google.maps.InfoWindow({content:'<strong>SURVCORP</strong><br>401 Pacific Highway Artarmon NSW 2033 Australia <br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h4 class="text-uppercase">CONTACT</h4>
+				<p><span class="glyphicon glyphicon-home"></span> &nbsp;401 Pacific Highway Artarmon NSW 2033 Australia</p>
+				<p><span class="glyphicon glyphicon-earphone"></span> &nbsp;telephone</p>
+				<p><span class="glyphicon glyphicon-envelope"></span>&nbsp; Email</p>
+			</div>
+			<div class="col-md-6">
+				<h4 class="text-uppercase">OPENNING HOURS</h4>
+			  <p> MONDAY to FRIDAY</p>
+			  <p> 9am to 3pm</p>
+			</div>
+
+		</div>
+
+		<a href="#" class="scroll-top back-to-top">&uarr;</a>
+	</div>
+	<!--/.container-->
+</div>
+<!--/#contact-->
+
+
+<!--/.page-section-->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	// navigation click actions
+	$('.scroll-link').on('click', function(event){
+		event.preventDefault();
+		var sectionID = $(this).attr("data-id");
+		scrollToID('#' + sectionID, 750);
+	});
+	// scroll to top action
+	$('.scroll-top').on('click', function(event) {
+		event.preventDefault();
+		$('html, body').animate({scrollTop:0}, 'slow');
+	});
+	// mobile nav toggle
+	$('#nav-toggle').on('click', function (event) {
+		event.preventDefault();
+		$('#main-nav').toggleClass("open");
+	});
+
+	$('.slide').hover(
+		function(){
+			$(this).find('.slide__caption').slideDown(250);
+		},
+		function(){
+			$(this).find('.slide__caption').slideUp(250);
+		}
+	);
+});
+// scroll function
+function scrollToID(id, speed){
+	var offSet = 50;
+	var targetOffset = $(id).offset().top - offSet;
+	var mainNav = $('#main-nav');
+	$('html,body').animate({scrollTop:targetOffset}, speed);
+	if (mainNav.hasClass("open")) {
+		mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+		mainNav.removeClass("open");
+	}
+}
+if (typeof console === "undefined") {
+    console = {
+        log: function() { }
+    };
+}
+</script>
+</body>
+</html>
